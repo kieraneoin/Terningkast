@@ -1,0 +1,70 @@
+//variabler
+int  Antal1 = 0;
+int  Antal2 = 0;
+int  Antal3 = 0;
+int  Antal4 = 0;
+int  Antal5 = 0;
+int  Antal6 = 0;
+int terningslag = 0;
+
+void setup() {
+  size(600, 460);
+  background(0);
+  //slår 6 gange med terningen
+  for (int i = 0; i < 1000; i++) {
+    terningslag = (int)random(1, 7);
+
+
+    if (terningslag == 1 ) {
+      Antal1 = Antal1 +1;
+    }
+
+    if (terningslag == 2 ) {
+      Antal2 = Antal2 +1;
+    }
+
+    if (terningslag == 3 ) {
+      Antal3 = Antal3 +1;
+    }
+
+    if (terningslag == 4 ) {
+      Antal4 = Antal4 +1;
+    }
+
+    if (terningslag == 5 ) {
+      Antal5 = Antal5 +1;
+    }
+
+    if (terningslag == 6 ) {
+      Antal6 = Antal6 +1;
+    }
+  }
+
+
+  println("terning slået 1", Antal1); 
+  println("terning slået 2", Antal2); 
+  println("terning slået 3", Antal3); 
+  println("terning slået 4", Antal4); 
+  println("terning slået 5", Antal5); 
+  println("terning slået 6", Antal6);
+}
+
+void draw() {
+  rect(0+110, 600-Antal1, 50, Antal1);
+  rect(0+170, 600-Antal2, 50, Antal2);
+  rect(0+230, 600-Antal3, 50, Antal3);
+  rect(0+290, 600-Antal4, 50, Antal4);
+  rect(0+350, 600-Antal5, 50, Antal5);
+  rect(0+410, 600-Antal6, 50, Antal6);
+
+fill(255);
+textSize(20);
+text(Antal1,115,600-Antal1);
+text(Antal2,175,600-Antal2);
+text(Antal3,235,600-Antal3);
+text(Antal4,295,600-Antal4);
+text(Antal5,355,600-Antal5);
+text(Antal6,415,600-Antal6);
+fill(255,0,0);
+
+}
